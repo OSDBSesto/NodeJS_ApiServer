@@ -3,11 +3,10 @@ var http = require("http");
 var express = require("express");
 var apiServer = express();
 
-var hostname = "127.0.0.1";
 var port = 3000;
 
-apiServer.listen(port, hostname, () => {
-    console.log("server running at http://%s:%d/", hostname, port);
+apiServer.listen(port, () => {
+    console.log("server running on port ", port);
 });
 
 apiServer.get("/nome", (req, res) =>{
