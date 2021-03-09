@@ -16,6 +16,12 @@ apiServer.get("/nome", (req, res) =>{
 
 apiServer.get("/somma", (req, res) => {
     console.log("richiesta: " , req.query);
+    if(req.query.a && req.query.b){
+        var ris = req.query.a - (- req.query.b); // -> il + concatena, quindi sottraggo l'inverso
+        console.log("ris = " , ris);
+        res.send("{ \"risultato\" : " + ris + "}");
+    }else
+    res.send("parametri non corretti");
 });
 
 apiServer.get("/", function(req, res){
