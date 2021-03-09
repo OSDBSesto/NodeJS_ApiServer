@@ -14,6 +14,10 @@ apiServer.get("/nome", (req, res) =>{
     res.send("ciao, il nome del server è: NODEPOGLIANI");
 });
 
+apiServer.get("/somma", (req, res) => {
+    console.log("richiesta: " , req.query);
+});
+
 apiServer.get("/", function(req, res){
     res.send("sei in home");
-})
+});
