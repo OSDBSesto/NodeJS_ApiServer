@@ -31,6 +31,18 @@ apiServer.get("/somma", (req, res) => {
 
 });
 
+// riceve in ingresso username e password e invia un messaggio "benvenuto [username]"
+apiServer.get("/login" , (req, res) => {}); 
+
+// riceve in ingresso username e password e invia un messaggio "benvenuto [username]"
+apiServer.post("/login" , (req, res) => {}); 
+
+/*
+sviluppare una pagina html con un div e duie pulsanti.
+Premendo sul pulsante "post" invierete una post con username e password e visualizzerete nella div il messaggio inviato dal server
+Premendo il pulsante "get" stessa cosa ma inviando una richiesta get
+*/
+
 apiServer.get("/", function (req, res) {
     res.send("sei in home");
 });
